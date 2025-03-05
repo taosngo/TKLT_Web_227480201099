@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.huynh {
+    display: flex;
+}
+/*menu em hiểu nó  chọn tất cả trong cây menu-ul-li-a*/
+.menu {
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+}
+.menu ul li {
+    margin: 10px 0;
+}
+
+
+.menu ul li a {
+    color: white;
+    text-decoration: underline; 
+    font-size: 18px;
+    display: block;
+    color: white;
+   
+}
+
+
+
+
+.tieude {
+    flex: 1;
+    padding: 20px;
+    background-color: gray;
+    border: 1px solid black;
+}
