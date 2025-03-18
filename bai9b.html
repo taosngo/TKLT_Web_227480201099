@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>bai9a cua em</title>
+</head>
+<body>
+
+    <script language="JavaScript">
+        var soLuong = prompt("Bạn cần nhập bao nhiêu thiết bị:", 5);
+        var thietBi = []; 
+        for (var i = 0; i < soLuong; i++) {
+            thietBi[i] = prompt("Nhập vào tên thiết bị:", "");
+        }
+
+        document.write("<h1>Danh sách thiết bị:</h1>");
+        document.write("<table border='1' cellpadding='5'>");
+        document.write("<tr><th>STT</th><th>Tên Thiết Bị</th></tr>");
+
+        for (var i = 0; i < thietBi.length; i++) {
+            document.write("<tr><td>" + (i + 1) + "</td><td>" + thietBi[i] + "</td></tr>");
+        }
+        document.write("</table>");
+
+        document.write("<h1>Danh sách thiết bị là 'Computer':</h1>");
+        document.write("<table border='1' cellpadding='5'>");
+        document.write("<tr><th>STT</th><th>Tên Thiết Bị</th></tr>");
+
+        var stt = 1;
+        for (var i = 0; i < thietBi.length; i++) {
+            if (thietBi[i].toLowerCase() === "computer") { // Không phân biệt hoa/thường
+                document.write("<tr><td>" + stt + "</td><td>" + thietBi[i] + "</td></tr>");
+                stt++;
+            }
+        }
+        document.write("</table>");
+
+        if (stt === 1) {
+            document.write("<p>Không có thiết bị nào là 'Computer'.</p>");
+        }
+    </script>
+
+</body>
+</html>

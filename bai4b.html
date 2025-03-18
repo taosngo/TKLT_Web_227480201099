@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai4b</title>
+    <script language="JavaScript">
+        function cthoten() {
+            alert(document.getElementById("txthoten").value);
+        }
+
+        function ctdonvi() {
+            alert(document.getElementById("txtdonvi").value);
+        }
+    </script>
+</head>
+<body>
+    <h2>Hiển thị nội dung từ textbox</h2>
+
+    <input type="text" id="txthoten" value="Chào">
+    <input type="button" name="hoten" value="Họ tên" onclick="cthoten()">
+    
+    <br><br>
+
+    <input type="text" id="txtdonvi" value="Đơn vị">
+    <input type="button" name="donvi" value="Đơn vị" onclick="ctdonvi()">
+</body>
+</html>

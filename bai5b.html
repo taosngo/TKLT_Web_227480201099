@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai5b</title>
+</head>
+<body>
+    <h2>Ngày, Tháng, Năm Hiện Tại</h2>
+    <p id="dateDisplay"></p>
+
+    <script language="JavaScript">
+        var D = new Date();
+        var ngay = D.getDate();
+        var thang = D.getMonth() + 1; 
+        var nam = D.getFullYear();
+
+        document.getElementById("dateDisplay").innerHTML = "Hôm nay là: " + ngay + "/" + thang + "/" + nam;
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai7acuaem</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var D = new Date();
+        var NamHienTai = D.getFullYear();
+        var NamSinh;
+
+        do {
+            NamSinh = prompt("Bạn sinh năm bao nhiêu?lưu ý năm sinh không dc lớn hơn năm hiện tại", "");
+            if (NamSinh > NamHienTai) {
+                alert("Năm sinh không hợp lệ! Vui lòng nhập lại.");
+            }
+        } while (NamSinh > NamHienTai || NamSinh == "");
+
+        var tuoi = NamHienTai - NamSinh;
+        alert("Tuổi của bạn bây giờ là: " + tuoi);
+    </script>
+</body>
+</html>

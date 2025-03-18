@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bai6a</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var D = new Date();
+        var NamHienTai = D.getFullYear(); 
+        var NamSinh = prompt("Bạn sinh năm bao nhiêu? ", "");
+
+        if (NamSinh) {
+            var tuoi = NamHienTai - NamSinh;
+            alert("Tuổi của bạn bây giờ là: " + tuoi);
+        } else {
+            alert("Bạn chưa nhập năm sinh!");
+        }
+    </script>
+</body>
+</html>
