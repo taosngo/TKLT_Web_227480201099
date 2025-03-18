@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghép Họ và Tên</title>
+</head>
+<body>
+    <h2>Nhập họ và tên, sau đó nhấn "Hiển thị"</h2>
+    Họ: <input type="text" id="Ho"><br><br>
+    Tên: <input type="text" id="Ten"><br><br>
+    <input type="button" value="Hiển thị" onclick="hienThiHoTen()">
+    <p id="output"></p>
+
+    <script>
+        function hienThiHoTen() {
+            var ho = document.getElementById("Ho").value;
+            var ten = document.getElementById("Ten").value;
+            document.getElementById("output").innerHTML = "Họ và tên: " + ho + " " + ten;
+        }
+    </script>
+</body>
+</html>

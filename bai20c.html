@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính Lương Nhân Viên</title>
+    <script>
+        function tinhLuong() {
+            let heSo = parseFloat(document.getElementById("HeSo").value) || 0;
+            let luongCoSo = parseFloat(document.getElementById("LuongCoSo").value) || 0;
+            let namVaoLam = parseInt(document.getElementById("NamVaoLam").value) || 0;
+            let namHienTai = new Date().getFullYear();
+
+            let luongCoBan = heSo * luongCoSo;
+            let phuCap = 0.25 * luongCoBan;
+            let thamNien = namHienTai - namVaoLam;
+            let thanhTien = luongCoBan + phuCap;
+
+            document.getElementById("LuongCoBan").value = luongCoBan;
+            document.getElementById("PhuCap").value = phuCap;
+            document.getElementById("ThamNien").value = thamNien;
+            document.getElementById("ThanhTien").value = thanhTien;
+        }
+    </script>
+</head>
+<body>
+    <h2>Tính Lương Nhân Viên</h2>
+    Họ tên: <input type="text" id="HoTen"><br>
+    Năm vào làm: <input type="number" id="NamVaoLam"><br>
+    Hệ số: <input type="number" id="HeSo"><br>
+    Lương cơ sở: <input type="number" id="LuongCoSo"><br>
+    <button onclick="tinhLuong()">Tính Lương</button>
+    <hr>
+    Lương cơ bản: <input type="text" id="LuongCoBan" readonly><br>
+    Phụ cấp: <input type="text" id="PhuCap" readonly><br>
+    Thâm niên: <input type="text" id="ThamNien" readonly><br>
+    Tổng lương: <input type="text" id="ThanhTien" readonly><br>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Xử lý sự kiện onMouseMove</title>
+    <script>
+        function hienThiThongBao(thongBao) {
+            document.getElementById("status").innerText = thongBao;
+        }
+    </script>
+</head>
+<body>
+    <h2>Di chuyển chuột vào các phần tử</h2>
+    <p id="status">Di chuyển chuột vào phần tử để xem thông báo...</p>
+    
+    <button onmousemove="hienThiThongBao('Bạn đang di chuyển chuột vào nút Gửi')">Gửi</button>
+    <br><br>
+    
+    Họ tên: <input type="text" name="HoTen" onmousemove="hienThiThongBao('Bạn đang di chuyển chuột vào ô nhập họ tên')">
+    <br><br>
+    
+    Giới tính: 
+    <input type="radio" name="GioiTinh" onmousemove="hienThiThongBao('Bạn đang di chuyển chuột vào ô chọn Nam')"> Nam
+    <input type="radio" name="GioiTinh" onmousemove="hienThiThongBao('Bạn đang di chuyển chuột vào ô chọn Nữ')"> Nữ
+</body>
+</html>

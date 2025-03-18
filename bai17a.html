@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>bai17a</title>
+    <script>
+        function DoiMau() {
+            document.body.style.backgroundColor = document.getElementById("Mau").value;
+        }
+    </script>
+</head>
+<body>
+    <h2>Chọn màu nền:</h2>
+    <h3>mời thầy đổi màu</h3><br>
+    <select id="Mau" onchange="DoiMau()">
+        <option value="white">mặc định</option>
+        <option value="red">Màu đỏ</option>
+        <option value="blue">Màu xanh</option>
+        <option value="brown">Màu nâu</option>
+        <option value="lavender">Màu xanh nhạt</option>
+        <option value="black">màu đen</option>
+        <option value="green">màu yêu thích của em</option>
+    </select>
+</body>
+</html>

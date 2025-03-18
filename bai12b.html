@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị nội dung hộp text</title>
+</head>
+<body>
+    <h2>Nhập họ tên và năm sinh, sau đó nhấn "Hiển thị"</h2>
+    Họ tên: <input type="text" id="HoTen"><br><br>
+    Năm sinh: <input type="text" id="NamSinh"><br><br>
+    <input type="button" value="Hiển thị" onclick="hienThi()">
+    <p id="output"></p>
+
+    <script>
+        function hienThi() {
+            var hoten = document.getElementById("HoTen").value;
+            var namsinh = document.getElementById("NamSinh").value;
+            document.getElementById("output").innerHTML = "Họ tên: " + hoten + "<br>Năm sinh: " + namsinh;
+        }
+    </script>
+</body>
+</html>

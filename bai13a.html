@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng hai số</title>
+</head>
+<body>
+    <h2>Hãy nhập hai số và click vào nút "Tính tổng"</h2>
+    <input type="text" id="SoHang1"> + 
+    <input type="text" id="SoHang2"> =
+    <input type="text" id="KetQua" readonly>  
+    <br><br>
+    <input type="button" value="Tính tổng" onclick="tinhTong()">
+
+    <script>
+        function tinhTong() {
+            var so1 = parseFloat(document.getElementById("SoHang1").value);
+            var so2 = parseFloat(document.getElementById("SoHang2").value);
+            if (!isNaN(so1) && !isNaN(so2)) {
+                document.getElementById("KetQua").value = so1 + so2;
+            } else {
+                alert("Vui lòng nhập số hợp lệ!");
+            }
+        }
+    </script>
+</body>
+</html>

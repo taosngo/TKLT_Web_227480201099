@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Máy Tính với Select Box</title>
+    <script>
+        function tinhToan() {
+            let so1 = parseFloat(document.getElementById("So01").value) || 0;
+            let so2 = parseFloat(document.getElementById("So02").value) || 0;
+            let ketQua = 0;
+            let phepToan = document.getElementById("phepToan").value;
+
+            switch (phepToan) {
+                case '+': ketQua = so1 + so2; break;
+                case '-': ketQua = so1 - so2; break;
+                case '*': ketQua = so1 * so2; break;
+                case '/': 
+                    ketQua = so2 !== 0 ? so1 / so2 : "Không thể chia cho 0"; 
+                    break;
+            }
+
+            document.getElementById("KetQua").value = ketQua;
+        }
+    </script>
+</head>
+<body>
+    <h2>Máy Tính với Select Box</h2>
+    Số 1: <input type="number" id="So01"><br>
+    Số 2: <input type="number" id="So02"><br>
+    <select id="phepToan">
+        <option value="+">Cộng (+)</option>
+        <option value="-">Trừ (-)</option>
+        <option value="*">Nhân (×)</option>
+        <option value="/">Chia (÷)</option>
+    </select>
+    <br>
+    <button onclick="tinhToan()">Tính</button>
+    <hr>
+    Kết quả: <input type="text" id="KetQua" readonly><br>
+</body>
+</html>

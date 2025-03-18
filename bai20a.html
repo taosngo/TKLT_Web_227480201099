@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tính Thành Tiền</title>
+    <script>
+        function tinhThanhTien() {
+            let soLuong = document.getElementById("SoLuong").value;
+            let donGia = document.getElementById("DonGia").value;
+            document.getElementById("ThanhTien").value = soLuong * donGia;
+        }
+    </script>
+</head>
+<body>
+    <h2>Nhập số lượng và đơn giá</h2>
+    Số lượng: <input type="number" id="SoLuong" onkeyup="tinhThanhTien()"><br>
+    Đơn giá: <input type="number" id="DonGia" onkeyup="tinhThanhTien()"><br>
+    <hr>
+    Thành tiền: <input type="text" id="ThanhTien" readonly> USD
+</body>
+</html>

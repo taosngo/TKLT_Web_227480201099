@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+    <h2>Nhập hai số và chọn phép toán</h2>
+    <input type="text" id="SoHang1"> 
+    <input type="text" id="SoHang2"> =
+    <input type="text" id="KetQua" readonly>  
+    <br><br>
+    <input type="button" value="Cộng" onclick="tinhToan('+')">
+    <input type="button" value="Trừ" onclick="tinhToan('-')">
+    <input type="button" value="Nhân" onclick="tinhToan('*')">
+    <input type="button" value="Chia" onclick="tinhToan('/')">
+
+    <script>
+        function tinhToan(phepToan) {
+            var so1 = parseFloat(document.getElementById("SoHang1").value);
+            var so2 = parseFloat(document.getElementById("SoHang2").value);
+            var ketQua = 0;
+
+            if (isNaN(so1) || isNaN(so2)) {
+                alert("Vui lòng nhập số hợp lệ!");
+                return;
+            }
+
+            switch (phepToan) {
+                case '+': ketQua = so1 + so2; break;
+                case '-': ketQua = so1 - so2; break;
+                case '*': ketQua = so1 * so2; break;
+                case '/': 
+                    if (so2 === 0) {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    ketQua = so1 / so2; 
+                    break;
+            }
+            document.getElementById("KetQua").value = ketQua;
+        }
+    </script>
+</body>
+</html>

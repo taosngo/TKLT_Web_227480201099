@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đếm số ký tự</title>
+    <script>
+        function demKyTu() {
+            let noiDung = document.getElementById("NoiDung").value;
+            let soKyTu = noiDung.length;
+            document.getElementById("SoKyTu").value = soKyTu;
+
+            if (soKyTu > 200) {
+                alert("Bạn đã gõ quá số ký tự cho phép!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Nhập nội dung</h2>
+    Số ký tự đã gõ:<br> <input type="text" id="SoKyTu" readonly><br>
+    <textarea id="NoiDung" cols="50" rows="10" onkeyup="demKyTu()"></textarea>
+</body>
+</html>
