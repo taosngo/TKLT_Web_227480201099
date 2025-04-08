@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload nhiều file</title>
+    <style>
+        body {
+            background: linear-gradient(to left, #a1c4fd, #c2e9fb);
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.2);
+            width: 450px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="file"],
+        input[type="submit"] {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a29bfe;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Upload nhiều file ảnh</h2>
+        <form action="bai24chuong5_upload_multi_process.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="files[]" multiple required><br>
+            <input type="submit" value="Tải lên">
+        </form>
+    </div>
+</body>
+</html>
